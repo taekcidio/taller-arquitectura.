@@ -1,0 +1,19 @@
+name: Pipeline CI
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar código
+        uses: actions/checkout@v4
+
+      - name: Simular construcción
+        run: echo "Construyendo EventFlow"
+
+      - name: Simular pruebas
+        run: echo "Pruebas ejecutadas correctamente"
